@@ -3,7 +3,7 @@ class Solution {
         List<Node> list = new ArrayList<>();
         for(int i = 0; i < mat.length; i++) {
             int count = findStrength(mat[i]);
-            list.add(new Node(i, count + 1));
+            list.add(new Node(i, count));
         }
         Collections.sort(list, (a,b) -> a.count - b.count);
         int[] resCount = new int[k];
